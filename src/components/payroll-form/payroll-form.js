@@ -9,6 +9,9 @@ import logo from '../../assets/images/logo.png'
 function PayrollForm() {
     return (
     <>
+    <div className="payroll-main">
+           <header className='header row center'></header>
+    
        <div className="logo-content">
            <img src={logo} className="logo-content-img" alt="logo" />
            <div>
@@ -22,7 +25,7 @@ function PayrollForm() {
                <div className="form-head">Employee Payroll Form</div>
                <div className="row-content">
                    <label htmlFor="name" className="label text">Name</label>
-                   <input type="text" name="name" id="name" className="input" placeholder="Your Name ..." required />
+                   <input type="text" name="name" id="name" className="input" placeholder="Your Name" required />
                </div>
 
                <div className="row-content">
@@ -78,9 +81,8 @@ function PayrollForm() {
                </div>
 
                <div className="row-content">
-                   <label className="label text" htmlFor="salary">Salary </label>
-                   <input className="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000" />
-                   <output className="salary-output text" htmlFor="salary">400000</output>
+                   <label className="label text" htmlFor="salary"> Salary </label>
+                   <input className="input" type="number" name="salary" id="salary"  />
                </div>
 
                <div className="row-content">
@@ -158,6 +160,7 @@ function PayrollForm() {
                </div>
 
            </form>
+       </div>
        </div>
     </>
     )
